@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+        <action>
+            <actionName>test</actionName>
+            <packagings>
+                <packaging>*</packaging>
+            </packagings>
+            <goals>
+                <goal>test</goal>
+                <goal>vertx:runMod</goal>
+                
+            </goals>
+        </action>
+        <action>
+            <actionName>CUSTOM-Start</actionName>
+            <displayName>Start</displayName>
+            <goals>
+                <goal>test</goal>
+                <goal>vertx:runMod</goal>
+                
+                
+            </goals>
+        </action>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </actions>

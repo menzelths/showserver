@@ -64,8 +64,8 @@
     <dependency>
       <groupId>io.vertx</groupId>
       <artifactId>vertx-core</artifactId>
-      <version>${vertx.version}</version>
-      <scope>provided</scope>
+      <version>2.1.2-SNAPSHOT</version>
+      <type>jar</type>
     </dependency>
     <dependency>
       <groupId>io.vertx</groupId>
@@ -92,7 +92,11 @@
       <version>${vertx.testtools.version}</version>
       <scope>test</scope>
     </dependency>
-
+    <dependency>
+	<groupId>com.jetdrone</groupId>
+	<artifactId>yoke</artifactId>
+	<version>2.0.0</version>
+</dependency>
     <!-- Add any other dependencies that you want packaged into your module (in the lib dir) here
     as 'compile' dependencies. Here is an example
     <dependency>
@@ -156,8 +160,8 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>${maven.compiler.plugin.version}</version>
         <configuration>
-          <source>1.7</source>
-          <target>1.7</target>
+          <source>1.8</source>
+          <target>1.8</target>
         </configuration>
       </plugin>
       <plugin>
