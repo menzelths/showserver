@@ -38,8 +38,8 @@ import org.vertx.java.platform.Verticle;
 public class PingVerticle extends Verticle {
 
     public void start() {
-        int port=8080;
-        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+        int port=8083;
+       /* BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
         
         System.out.println("Bitte den Port eingeben: ");
         try{
@@ -52,7 +52,7 @@ public class PingVerticle extends Verticle {
             e.printStackTrace();
         }
         
-        
+        */
         Yoke yoke = new Yoke(this);
         
         JsonObject config = new JsonObject().putString("prefix", "/bridge");

@@ -12,7 +12,7 @@ $(function() {
     $(".befehl").on("click", function() {
         var nummer = parseInt(($(this).attr("id").split("_"))[1]);
         $("#beschreibung").html(l[nummer].beschreibung);
-        eb.send("showserver.alle", {message: 'aktion#neueseite#/lade/' + l[nummer].name + '/' + l[nummer].adresse});
+        eb.publish("showserver.alle", {message: 'aktion#neueseite#/lade/' + l[nummer].name + '/' + l[nummer].adresse});
     });
 
 
@@ -41,12 +41,12 @@ $(function() {
 
                     $("#befehle").html(htmltext);
                     $(".knopf").on("click", function() {
-                        eb.send("showserver.alle", {message: 'aktion#click#' + $(this).attr("id")});
+                        eb.publish("showserver.alle", {message: 'aktion#click#' + $(this).attr("id")});
 
                     });
                     $(".select").on("change", function() {
                         var wert = $("#auswahl option:selected").val();
-                        eb.send("showserver.alle", {message: 'aktion#change#' + wert + "#" + $(this).attr("id")});
+                        eb.publish("showserver.alle", {message: 'aktion#change#' + wert + "#" + $(this).attr("id")});
 
                     });
                 }
